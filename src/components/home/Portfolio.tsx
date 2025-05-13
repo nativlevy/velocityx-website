@@ -21,20 +21,7 @@ const Portfolio: React.FC = () => {
       status: 'active',
       category: 'Security'
     },
-    {
-      id: 2,
-      name: 'Stealth AI',
-      url: '',
-      status: 'active',
-      category: 'AI'
-    },
-    {
-      id: 3,
-      name: 'Stealth AI - Infra',
-      url: '',
-      status: 'active',
-      category: 'AI'
-    },
+
     {
       id: 4,
       name: 'Forsight Robotics',
@@ -59,7 +46,7 @@ const Portfolio: React.FC = () => {
     {
       id: 7,
       name: 'Ondigo',
-      url: 'https://ondigoconnect.io/',
+      url: '',
       status: 'acquired',
       category: 'Connectivity'
     },
@@ -146,7 +133,21 @@ const Portfolio: React.FC = () => {
       url: 'https://www.conbo.ai/',
       status: 'active',
       category: 'AI'
-    }
+    },
+    {
+      id: 20,
+      name: 'Stealth AI',
+      url: '',
+      status: 'active',
+      category: 'AI'
+    },
+    {
+      id: 21,
+      name: 'Stealth AI - Infra',
+      url: '',
+      status: 'active',
+      category: 'AI'
+    },
   ];
 
   // Group companies by status
