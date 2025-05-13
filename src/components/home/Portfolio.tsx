@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
     {
       id: 6,
       name: 'Splitty',
-      url: 'https://www.splittytravel.com',
+      url: 'https://www.splitty.com',
       status: 'acquired',
       category: 'Travel'
     },
