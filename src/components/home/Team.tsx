@@ -24,7 +24,7 @@ const Team: React.FC = () => {
     {
       id: 2,
       name: 'Tal Fialkow',
-      title: 'Head of Ai Dream Security, Operator @ Velocity x',
+      title: 'Head of AI Dream Security, Operator @ Velocity x',
       linkedin: 'https://www.linkedin.com/in/tal-fialkow-486b8455/',
       image: '/images/team/tal_fialkow.jpg'
     },

@@ -123,17 +123,17 @@ const Philosophy: React.FC = () => {
               </div>
               
               <div>
-                <blockquote className="border-l-4 border-blue-500 pl-6 italic text-white/90 text-lg leading-relaxed">
-                  "We partner with founders at the <span className="text-blue-400 not-italic font-medium">inception</span> stage, supporting them relentlessly until the world sees <span className="text-blue-400 not-italic font-medium">what we see</span>."
-                </blockquote>
-                
-                <div className="mt-8">
+                <div className="mb-8">
                   <img 
                     src="/images/visualization.png" 
                     alt="Data Visualization"
-                    className="rounded-lg w-full h-auto"
+                    className="rounded-lg w-2/5 mx-auto h-auto"
                   />
                 </div>
+                
+                <blockquote className="border-l-4 border-blue-500 pl-6 italic text-white/90 text-lg leading-relaxed">
+                  "We partner with founders at the <span className="text-blue-400 not-italic font-medium">inception</span> stage, supporting them relentlessly until the world sees <span className="text-blue-400 not-italic font-medium">what we see</span>."
+                </blockquote>
               </div>
             </div>
           </div>
