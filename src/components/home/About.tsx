@@ -71,7 +71,7 @@ const About: React.FC = () => {
           <div className="relative animate-on-scroll opacity-0 animation-delay-900">
             <div className="rounded-2xl overflow-hidden border border-white/10">
               <img 
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="/images/location.jpg" 
                 alt="Velocity Team Collaboration"
                 className="w-full h-auto object-cover"
               />

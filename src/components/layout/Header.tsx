@@ -35,6 +35,9 @@ const Header: React.FC = () => {
           <a href="#philosophy" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
             Philosophy
           </a>
+          <a href="#portfolio" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
+            Portfolio
+          </a>
           <a href="#team" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
             Team
           </a>
@@ -72,6 +75,13 @@ const Header: React.FC = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Philosophy
+          </a>
+          <a
+            href="#portfolio"
+            className="text-white/80 hover:text-white transition-colors text-lg"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Portfolio
           </a>
           <a
             href="#team"

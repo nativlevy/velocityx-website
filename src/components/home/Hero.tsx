@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 z-0 opacity-40" 
         ref={parallaxRef}
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundImage: 'url("https://images.pexels.com/photos/6623875/pexels-photo-6623875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
