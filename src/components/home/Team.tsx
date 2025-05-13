@@ -141,11 +141,11 @@ const Team: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <div
               key={member.id}
               className="group animate-on-scroll opacity-0"
-              style={{ animationDelay: `${(index + 1) * 200}ms` }}
+              style={{ animationDelay: `100ms` }}
             >
               <div className="bg-gradient-to-br from-blue-900/10 to-transparent backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-blue-400/30 group-hover:translate-y-[-5px]">
                 <div className="relative aspect-[4/5] overflow-hidden">
