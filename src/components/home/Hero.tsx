@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const parallaxRef = useRef<HTMLDivElement>(null);
+  const parallaxRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,16 +26,21 @@ const Hero: React.FC = () => {
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-purple-700/10 blur-[100px] animate-pulse-slow"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[30vw] h-[30vw] rounded-full bg-blue-700/10 blur-[100px] animate-pulse-slow animation-delay-2000"></div>
       
-      {/* Parallax element */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40" 
+      {/* Parallax background video */}
+      <video
         ref={parallaxRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/6623875/pexels-photo-6623875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          transform: 'translateZ(0)', // for hardware acceleration
         }}
-      ></div>
+      >
+        <source src="https://videos.pexels.com/video-files/4927241/4927241-uhd_2732_1440_30fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-20">
