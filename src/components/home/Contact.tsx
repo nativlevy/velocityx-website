@@ -4,64 +4,60 @@ import { Mail, MapPin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <Section id="contact" className="bg-gradient-to-b from-gray-900 to-black">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Touch</span>
-            </h2>
-            <p className="text-white/80 mb-8 leading-relaxed">
-              Whether you're a founder at day zero or already building, we'd love to hear from you.
-              Connect with us to explore how we can help accelerate your journey.
-            </p>
+    <Section id="contact" className="bg-gradient-to-b from-gray-100 to-white py-16 md:py-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-black mb-8">
+            Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700 font-semibold">Touch</span>
+          </h2>
+          <p className="text-lg text-black/75 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Whether you're a founder at day zero or already building, we'd love to hear from you.
+            Connect with us to explore how we can help accelerate your journey.
+          </p>
+        </div>
             
-            <div className="space-y-6 mb-10">
-              <div className="flex items-start">
-                <div className="bg-blue-600/20 p-3 rounded-lg mr-4">
-                  <Mail className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl text-white mb-2">Email Us</h3>
-                  <a className="text-white/70 hover:text-blue-400 transition-colors">
-                    avishag at velocityx.vc
-                  </a>
-                  <p className="text-white/70 mt-1">
-                    or itzik: ipolad at gmail.com (Data Master)
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 items-stretch">
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-black/5">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-500/10 p-3 rounded-lg mr-4 inline-flex">
+                <Mail className="w-7 h-7 text-blue-600" />
               </div>
-              
-              <div className="flex items-start">
-                <div className="bg-purple-600/20 p-3 rounded-lg mr-4">
-                  <MapPin className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl text-white mb-2">Visit Our Space</h3>
-                  <p className="text-white/70">
-                    Our Founders Shack is located on the seafront in Tel Aviv, Israel.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-medium text-black">Email Us</h3>
             </div>
-            
-            <blockquote className="border-l-4 border-blue-500 pl-6 italic text-white/90">
-              "We see what others don't, until they can't ignore it anymore."
-            </blockquote>
+            <a href="mailto:avishag@velocityx.vc" className="text-black/80 hover:text-blue-600 transition-colors block mb-1 text-lg">
+              avishag@velocityx.vc
+            </a>
+            <p className="text-black/60 text-sm">
+              Reach out to Avishag for general inquiries.
+            </p>
+            <a href="mailto:ipolad@gmail.com" className="text-black/80 hover:text-blue-600 transition-colors block mt-3 text-lg">
+              ipolad@gmail.com
+            </a>
+            <p className="text-black/60 text-sm">
+              Contact Itzik (Data Master) for data-specific questions.
+            </p>
           </div>
           
-          <div className="relative">
-            <img 
-              src="/images/location.jpg"
-              alt="Velocity X Location"
-              className="rounded-xl w-full h-auto object-cover shadow-lg border border-white/10"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-              <p className="text-white/90 text-sm">
-                Join us at our seafront space where innovation meets inspiration
-              </p>
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-black/5">
+            <div className="flex items-center mb-4">
+              <div className="bg-purple-500/10 p-3 rounded-lg mr-4 inline-flex">
+                <MapPin className="w-7 h-7 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-medium text-black">Visit Our Space</h3>
             </div>
+            <p className="text-lg text-black/80">
+              Our Founders Shack is located on the seafront in Tel Aviv, Israel.
+            </p>
+            <p className="text-black/60 mt-2 text-sm">
+              We'd love to welcome you for a coffee and a chat.
+            </p>
           </div>
+        </div>
+        
+        <div className="text-center">
+          <blockquote className="border-l-4 border-blue-600 pl-6 py-3 italic text-xl text-black/85 max-w-xl mx-auto">
+            "We're not riding the wave. We're creating it-with you, from day zero."
+          </blockquote>
         </div>
       </div>
     </Section>

@@ -36,32 +36,11 @@ const Team: React.FC = () => {
       image: '/images/team/itzik.png'
     },
     {
-      id: 4,
-      name: 'Gadi Lifshitz',
-      title: 'Engineering Manager Meta, Operator Velocity X',
-      linkedin: 'https://www.linkedin.com/in/lgadi/',
-      image: '/images/team/gadi_lifshitz.png'
-    },
-    {
-      id: 5,
-      name: 'Barak Ben Rachel',
-      title: 'Ex Armis, Operator Velocity X',
-      linkedin: 'https://www.linkedin.com/in/barakbr/',
-      image: '/images/team/barak.png'
-    },
-    {
-      id: 6,
-      name: 'Alon Boxiner',
-      title: 'Founder Eva, Ex Checkpoint, Operator @ Velocity x',
-      linkedin: 'https://www.linkedin.com/in/alon-boxiner-a1a713b4/',
-      image: '/images/team/alon_boxiner.jpg'
-    },
-    {
-      id: 7,
-      name: 'Keren Ben Zvi',
-      title: 'CDO PayU',
-      linkedin: 'https://www.linkedin.com/in/keren-ben-zvi-data/',
-      image: '/images/team/keren.png'
+      id: 9,
+      name: 'Adi Glasman',
+      title: 'VP Engineering & Data @ Zendesk, Operator Velocity X',
+      linkedin: 'https://www.linkedin.com/in/glasman/',
+      image: '/images/team/adi.png'
     },
     {
       id: 8,
@@ -71,11 +50,18 @@ const Team: React.FC = () => {
       image: '/images/team/victor_shafran.png'
     },
     {
-      id: 9,
-      name: 'Adi Glasman',
-      title: 'VP Engineering & Data @ Zendesk, Operator Velocity X',
-      linkedin: 'https://www.linkedin.com/in/glasman/',
-      image: '/images/team/adi.png'
+      id: 7,
+      name: 'Keren Ben Zvi',
+      title: 'CDO PayU',
+      linkedin: 'https://www.linkedin.com/in/keren-ben-zvi-data/',
+      image: '/images/team/keren.png'
+    },
+    {
+      id: 13,
+      name: 'Eti Fakiri',
+      title: 'Director of Product Management Meta, Operator VelocityX',
+      linkedin: 'https://www.linkedin.com/in/estherfakiri/',
+      image: '/images/team/eti_fakiri.png'
     },
     {
       id: 10,
@@ -92,6 +78,20 @@ const Team: React.FC = () => {
       image: '/images/team/daniella_gutlansk.png'
     },
     {
+      id: 4,
+      name: 'Gadi Lifshitz',
+      title: 'Engineering Manager Meta, Operator Velocity X',
+      linkedin: 'https://www.linkedin.com/in/lgadi/',
+      image: '/images/team/gadi_lifshitz.png'
+    },
+    {
+      id: 5,
+      name: 'Barak Ben Rachel',
+      title: 'Ex Armis, Operator Velocity X',
+      linkedin: 'https://www.linkedin.com/in/barakbr/',
+      image: '/images/team/barak.png'
+    },
+    {
       id: 12,
       name: 'Shmuel Milavski',
       title: 'Business Intelligence Manager at WalkMe',
@@ -99,11 +99,11 @@ const Team: React.FC = () => {
       image: '/images/team/shmuel.jpg'
     },
     {
-      id: 13,
-      name: 'Eti Fakiri',
-      title: 'Director of Product Management Meta, Operator VelocityX',
-      linkedin: 'https://www.linkedin.com/in/estherfakiri/',
-      image: '/images/team/eti_fakiri.png'
+      id: 6,
+      name: 'Alon Boxiner',
+      title: 'Founder Eva, Ex Checkpoint, Operator @ Velocity x',
+      linkedin: 'https://www.linkedin.com/in/alon-boxiner-a1a713b4/',
+      image: '/images/team/alon_boxiner.jpg'
     }
   ];
 
@@ -128,15 +128,14 @@ const Team: React.FC = () => {
   }, []);
 
   return (
-    <Section id="team" className="bg-gradient-to-b from-black to-gray-900">
+    <Section id="team" className="bg-gradient-to-b from-white to-gray-100">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-white mb-6 animate-on-scroll opacity-0">
-            Meet the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Team</span> Behind Your Team
+          <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
+            Meet the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">Team</span> Behind Your Team
           </h2>
-          <p className="text-white/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-            Operators, data executives, and post-exit founders with deep expertise in AI, data, and security.
-            We've been there, built that, and now we're helping the next generation of founders succeed.
+          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
+          Operators with deep expertise in AI, data, and infra-shaped at Meta, Google, Microsoft, Zendesk and breakout startups. Built, scaled, and exited-now backing the next generation from day zero.
           </p>
         </div>
         
@@ -147,25 +146,25 @@ const Team: React.FC = () => {
               className="group animate-on-scroll opacity-0"
               style={{ animationDelay: `100ms` }}
             >
-              <div className="bg-gradient-to-br from-blue-900/10 to-transparent backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-blue-400/30 group-hover:translate-y-[-5px]">
+              <div className="bg-gradient-to-br from-blue-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-blue-500/30 group-hover:translate-y-[-5px]">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-xl text-white font-medium mb-1">{member.name}</h3>
-                    <p className="text-white/70 text-sm line-clamp-2">{member.title}</p>
+                    <p className="text-white/80 text-sm line-clamp-2">{member.title}</p>
                   </div>
                   
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-4 right-4 bg-black/50 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300"
+                    className="absolute top-4 right-4 bg-black/30 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
@@ -173,12 +172,6 @@ const Team: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center animate-on-scroll opacity-0 animation-delay-1200">
-          <p className="text-white/70">
-            Our team brings decades of experience from leading companies including Meta, Google, Zendesk, and successful startups.
-          </p>
         </div>
       </div>
     </Section>

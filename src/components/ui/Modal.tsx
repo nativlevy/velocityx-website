@@ -40,16 +40,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div
         ref={modalRef}
-        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gray-900 rounded-xl shadow-2xl border border-white/10"
+        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-xl shadow-2xl border border-black/10"
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-gray-900/80 backdrop-blur-sm border-b border-white/10">
-          {title && <h2 className="text-2xl font-light text-white">{title}</h2>}
+        <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-white/80 backdrop-blur-sm border-b border-black/10">
+          {title && <h2 className="text-2xl font-light text-black">{title}</h2>}
           <button
             onClick={onClose}
-            className="p-2 text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/10"
+            className="p-2 text-black/70 hover:text-black transition-colors rounded-lg hover:bg-black/10"
           >
             <X className="w-6 h-6" />
           </button>

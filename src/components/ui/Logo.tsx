@@ -25,7 +25,7 @@ const Logo: React.FC<LogoProps> = ({ showText = true, size = 'md' }) => {
       </div>
       
       {showText && (
-        <div className="text-white font-light tracking-wider text-lg md:text-xl">
+        <div className="text-black font-light tracking-wider text-lg md:text-xl">
           VELOCITY<sup>x</sup>
         </div>
       )}

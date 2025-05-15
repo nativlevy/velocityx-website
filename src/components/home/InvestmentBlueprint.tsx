@@ -37,7 +37,7 @@ As coding and computing become increasingly complex and distributed, new technol
 
 const InvestmentBlueprint: React.FC = () => {
   return (
-    <div className="prose prose-invert max-w-none">
+    <div className="prose max-w-none">
       <ReactMarkdown>{blueprintContent}</ReactMarkdown>
     </div>
   );

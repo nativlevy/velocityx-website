@@ -8,7 +8,7 @@ import Contact from '../components/home/Contact';
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-white text-black overflow-x-hidden">
       <Hero />
       <About />
       <Philosophy />

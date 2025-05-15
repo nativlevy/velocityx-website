@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/90 backdrop-blur-md py-4 shadow-lg'
+          ? 'bg-white/90 backdrop-blur-md py-4 shadow-lg'
           : 'bg-transparent py-6'
       }`}
     >
@@ -29,26 +29,26 @@ const Header: React.FC = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
+          <a href="#about" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
             About
           </a>
-          <a href="#philosophy" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
+          <a href="#philosophy" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
             Philosophy
           </a>
-          <a href="#portfolio" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
+          <a href="#portfolio" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
             Portfolio
           </a>
-          <a href="#team" className="text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest">
+          <a href="#team" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
             Team
           </a>
-          <a href="#contact" className="bg-white/10 hover:bg-white/20 border border-white/30 text-white py-2 px-4 rounded-full text-sm transition-all duration-300 flex items-center group">
+          <a href="#contact" className="bg-black/5 hover:bg-black/10 border border-black/20 text-black py-2 px-4 rounded-full text-sm transition-all duration-300 flex items-center group">
             <span>Contact Us</span>
             <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
           </a>
         </nav>
 
         <button
-          className="md:hidden text-white p-1"
+          className="md:hidden text-black p-1"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -57,42 +57,42 @@ const Header: React.FC = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md transition-all duration-300 overflow-hidden ${
           mobileMenuOpen ? 'max-h-screen' : 'max-h-0'
         }`}
       >
         <div className="container mx-auto px-4 py-6 flex flex-col space-y-6">
           <a
             href="#about"
-            className="text-white/80 hover:text-white transition-colors text-lg"
+            className="text-black/80 hover:text-black transition-colors text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             About
           </a>
           <a
             href="#philosophy"
-            className="text-white/80 hover:text-white transition-colors text-lg"
+            className="text-black/80 hover:text-black transition-colors text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Philosophy
           </a>
           <a
             href="#portfolio"
-            className="text-white/80 hover:text-white transition-colors text-lg"
+            className="text-black/80 hover:text-black transition-colors text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Portfolio
           </a>
           <a
             href="#team"
-            className="text-white/80 hover:text-white transition-colors text-lg"
+            className="text-black/80 hover:text-black transition-colors text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Team
           </a>
           <a
             href="#contact"
-            className="bg-white/10 hover:bg-white/20 border border-white/30 text-white py-3 px-6 rounded-full text-center transition-all duration-300"
+            className="bg-black/5 hover:bg-black/10 border border-black/20 text-black py-3 px-6 rounded-full text-center transition-all duration-300"
             onClick={() => setMobileMenuOpen(false)}
           >
             Contact Us
