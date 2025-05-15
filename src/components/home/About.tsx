@@ -79,7 +79,7 @@ const About: React.FC = () => {
               />
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-white/80 backdrop-blur-sm border border-black/10 rounded-xl p-6 w-64">
+            {/* <div className="absolute -bottom-6 -right-6 bg-white/80 backdrop-blur-sm border border-black/10 rounded-xl p-6 w-64">
               <div className="flex items-center mb-4">
                 <Users className="w-5 h-5 text-blue-500 mr-2" />
                 <h4 className="text-black text-sm">TEAM EXPERTISE</h4>
@@ -98,7 +98,7 @@ const About: React.FC = () => {
                 <h4 className="text-white">90%</h4>
               </div>
               <p className="text-white/70 text-sm">of our investments start at day zero</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
