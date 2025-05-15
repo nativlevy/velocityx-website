@@ -215,51 +215,65 @@ const Portfolio: React.FC = () => {
     return `https://cdn.brandfetch.io/${domain}/w/400/h/400?c=1idjQoo38323pC02ZXr`;
   };
 
-  const CompanyCard = ({ company }: { company: PortfolioCompany }) => (
-    <div className="animate-on-scroll opacity-0" style={{ animationDelay: `50ms` }}>
-      <a
-        href={company.url || '#'}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block bg-gradient-to-br from-blue-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-6 h-full transition-all duration-300 hover:border-blue-500/30 hover:translate-y-[-5px] group"
-      >
-        <div className="flex items-center justify-start h-20 mb-4 relative overflow-hidden">
-          {company.url && (
-            <img
-              src={generateLogoUrl(company.url)}
-              alt={`${company.name} logo`}
-              className="max-h-full max-w-full object-contain"
-              onError={(e) => {
-                // Fallback if image fails to load
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = '/images/logo-placeholder.png';
-              }}
-            />
-          )}
-        </div>
-        <h3 className="text-lg text-black mb-1 flex items-center">
-          {company.name}
-          {company.url && <ExternalLink className="w-4 h-4 ml-1 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />}
-        </h3>
-        <div className="flex items-center mt-2">
-          <span className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-600 mr-2">
-            {company.category}
-          </span>
-          {company.status === 'acquired' && (
-            <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-600">
-              Acquired
+  const CompanyCard = ({ company }: { company: PortfolioCompany }) => {
+    let logoSrc: string | undefined = undefined;
+    let imgClassName = 'object-contain max-h-full max-w-full';
+
+    if (company.name === 'Ondigo') {
+      logoSrc = '/images/logos/ondigo.png';
+    } else if (company.name === 'Deci') {
+      logoSrc = '/images/logos/deciai.png';
+      imgClassName = 'object-contain h-8 w-auto';
+    } else if (company.url) {
+      logoSrc = generateLogoUrl(company.url);
+    }
+
+    return (
+      <div className="animate-on-scroll opacity-0" style={{ animationDelay: `50ms` }}>
+        <a
+          href={company.url || '#'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-gradient-to-br from-blue-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-6 h-full transition-all duration-300 hover:border-blue-500/30 hover:translate-y-[-5px] group"
+        >
+          <div className="flex items-center justify-start h-20 mb-4 relative overflow-hidden">
+            {logoSrc && (
+              <img
+                src={logoSrc}
+                alt={`${company.name} logo`}
+                className={imgClassName}
+                onError={(e) => {
+                  // Fallback if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = '/images/logo-placeholder.png';
+                }}
+              />
+            )}
+          </div>
+          <h3 className="text-lg text-black mb-1 flex items-center">
+            {company.name}
+            {company.url && <ExternalLink className="w-4 h-4 ml-1 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />}
+          </h3>
+          <div className="flex items-center mt-2">
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-600 mr-2">
+              {company.category}
             </span>
-          )}
-          {company.status === 'ipo' && (
-            <span className="text-xs px-2 py-1 rounded-full bg-purple-500/10 text-purple-600">
-              IPO
-            </span>
-          )}
-        </div>
-      </a>
-    </div>
-  );
+            {company.status === 'acquired' && (
+              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-600">
+                Acquired
+              </span>
+            )}
+            {company.status === 'ipo' && (
+              <span className="text-xs px-2 py-1 rounded-full bg-purple-500/10 text-purple-600">
+                IPO
+              </span>
+            )}
+          </div>
+        </a>
+      </div>
+    );
+  };
 
   return (
     <Section id="portfolio" className="">
