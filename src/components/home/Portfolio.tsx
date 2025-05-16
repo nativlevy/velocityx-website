@@ -29,7 +29,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.forsightrobotics.com/',
       status: 'active',
       category: 'Robotics',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 5,
@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => {
       url: 'http://www.deci.ai/',
       status: 'acquired',
       category: 'AI',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 6,
@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.holisto.com/',
       status: 'acquired',
       category: 'Travel',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 7,
@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
       url: '',
       status: 'acquired',
       category: 'Connectivity',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 8,
@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.lagunahealth.com/about-us',
       status: 'active',
       category: 'Health',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 9,
@@ -69,7 +69,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.antidot.net/',
       status: 'active',
       category: 'Fintech, AI',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 10,
@@ -77,7 +77,7 @@ const Portfolio: React.FC = () => {
       url: 'https://rightbound.io/',
       status: 'active',
       category: 'Sales',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 11,
@@ -85,7 +85,7 @@ const Portfolio: React.FC = () => {
       url: 'https://carbonblue.cc/',
       status: 'active',
       category: 'CDR',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 12,
@@ -93,7 +93,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.agaveapi.com/',
       status: 'active',
       category: 'Construction',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 14,
@@ -101,7 +101,7 @@ const Portfolio: React.FC = () => {
       url: 'https://remilk.com/',
       status: 'active',
       category: 'FoodTech',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 15,
@@ -109,7 +109,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.sensi.ai/',
       status: 'active',
       category: 'AI',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 16,
@@ -117,7 +117,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.movexii.com/en',
       status: 'acquired',
       category: 'Logistics',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 17,
@@ -125,7 +125,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.simplex.com/',
       status: 'acquired',
       category: 'Fintech',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 18,
@@ -133,7 +133,7 @@ const Portfolio: React.FC = () => {
       url: 'https://zoomd.com/',
       status: 'ipo',
       category: 'Marketing',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 19,
@@ -141,7 +141,7 @@ const Portfolio: React.FC = () => {
       url: 'https://www.conbo.ai/',
       status: 'active',
       category: 'AI',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 20,
@@ -157,7 +157,7 @@ const Portfolio: React.FC = () => {
       url: '',
       status: 'active',
       category: 'AI',
-      division: 'GP Investments [Avishag]',
+      division: 'GP Portfolio [Avishag]',
     },
     {
       id: 22,
@@ -175,10 +175,18 @@ const Portfolio: React.FC = () => {
       category: 'EW',
       division: 'Velocity<sup>x</sup>',
     },
+    {
+      id: 24,
+      name: 'Stealth AI - Agent',
+      url: '',
+      status: 'active',
+      category: 'AI',
+      division: 'Velocity<sup>x</sup>',
+    },
   ];
 
   // Group companies by new divisions
-  const divisionOrder = ['Velocity<sup>x</sup>', 'GP Investments [Avishag]'];
+  const divisionOrder = ['Velocity<sup>x</sup>', 'GP Portfolio [Avishag]'];
   const groupedCompanies = companies.reduce((acc, company) => {
     const divisionName = company.division;
     if (!acc[divisionName]) {
