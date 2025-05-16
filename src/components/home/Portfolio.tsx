@@ -152,14 +152,6 @@ const Portfolio: React.FC = () => {
       division: 'Velocity<sup>x</sup>',
     },
     {
-      id: 21,
-      name: 'Stealth AI - Infra',
-      url: '',
-      status: 'active',
-      category: 'AI',
-      division: 'GP Portfolio [Avishag]',
-    },
-    {
       id: 22,
       name: 'Troup.Ai [Stealth] Infra A',
       url: '',
