@@ -15,23 +15,10 @@ export default {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        purple: {
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7e22ce',
-          800: '#6b21a8',
-          900: '#581c87',
-        },
         green: {
           400: '#4ade80',
           500: '#22c55e',
           600: '#16a34a',
-        },
-        orange: {
-          400: '#fb923c',
-          500: '#f97316',
-          600: '#ea580c',
         },
       },
       animation: {
@@ -55,7 +42,7 @@ export default {
             '--tw-prose-bullets': theme('colors.gray[600]'),
             '--tw-prose-hr': theme('colors.gray[700]'),
             '--tw-prose-quotes': theme('colors.gray[300]'),
-            '--tw-prose-quote-borders': theme('colors.blue[500]'),
+            '--tw-prose-quote-borders': theme('colors.gray[500]'),
             '--tw-prose-captions': theme('colors.gray[400]'),
             '--tw-prose-code': theme('colors.white'),
             '--tw-prose-pre-code': theme('colors.gray[300]'),

@@ -132,7 +132,7 @@ const Team: React.FC = () => {
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-            Meet the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">Team</span> Behind Your Team
+            Meet the <span className="text-black">Team</span> Behind Your Team
           </h2>
           <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
           Operators with deep expertise in AI, data, and infra-shaped at Meta, Google, Microsoft, Zendesk and breakout startups. Built, scaled, and exited-now backing the next generation from day zero.
@@ -146,12 +146,12 @@ const Team: React.FC = () => {
               className="group animate-on-scroll opacity-0"
               style={{ animationDelay: `100ms` }}
             >
-              <div className="bg-gradient-to-br from-blue-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-blue-500/30 group-hover:translate-y-[-5px]">
+              <div className="bg-gradient-to-br from-gray-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-black/30 group-hover:translate-y-[-5px]">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 filter grayscale group-hover:filter-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   

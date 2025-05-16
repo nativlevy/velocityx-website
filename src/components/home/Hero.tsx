@@ -20,11 +20,11 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center bg-white overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-100/30 to-gray-100/30 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100/30 to-gray-200/30 z-10"></div>
       
       {/* Animated circles */}
-      <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-purple-300/20 blur-[100px] animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[30vw] h-[30vw] rounded-full bg-blue-300/20 blur-[100px] animate-pulse-slow animation-delay-2000"></div>
+      <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-gray-300/20 blur-[100px] animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[30vw] h-[30vw] rounded-full bg-gray-300/20 blur-[100px] animate-pulse-slow animation-delay-2000"></div>
       
       {/* Parallax background video */}
       <video
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-20 filter grayscale"
         style={{
           transform: 'translateZ(0)', // for hardware acceleration
         }}
@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-black mb-6 tracking-tight">
-            From <span className="text-blue-500">day zero</span> to<br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">exponential growth</span>
+            From <span className="text-black">day zero</span> to<br />
+            <span className="text-black">exponential growth</span>
           </h1>
           
           <p className="text-xl text-black/80 mb-10 max-w-2xl mx-auto leading-relaxed">

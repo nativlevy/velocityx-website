@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-light text-black mb-8">
-            Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700 font-semibold">Touch</span>
+            Get in <span className="font-semibold text-black">Touch</span>
           </h2>
           <p className="text-lg text-black/75 mb-12 leading-relaxed max-w-2xl mx-auto">
             Whether you're a founder at day zero or already building, we'd love to hear from you.
@@ -19,8 +19,8 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 items-stretch">
           <div className="bg-white p-6 rounded-xl shadow-lg border border-black/5">
             <div className="flex items-center mb-4">
-              <div className="bg-blue-500/10 p-3 rounded-lg mr-4 inline-flex">
-                <Linkedin className="w-7 h-7 text-blue-600" />
+              <div className="bg-gray-500/10 p-3 rounded-lg mr-4 inline-flex">
+                <Linkedin className="w-7 h-7 text-gray-600" />
               </div>
               <h3 className="text-2xl font-medium text-black">Connect on LinkedIn</h3>
             </div>
@@ -40,8 +40,8 @@ const Contact: React.FC = () => {
           
           <div className="bg-white p-6 rounded-xl shadow-lg border border-black/5">
             <div className="flex items-center mb-4">
-              <div className="bg-purple-500/10 p-3 rounded-lg mr-4 inline-flex">
-                <MapPin className="w-7 h-7 text-purple-600" />
+              <div className="bg-gray-500/10 p-3 rounded-lg mr-4 inline-flex">
+                <MapPin className="w-7 h-7 text-gray-600" />
               </div>
               <h3 className="text-2xl font-medium text-black">Visit Our Space</h3>
             </div>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <blockquote className="border-l-4 border-blue-600 pl-6 py-3 italic text-xl text-black/85 max-w-xl mx-auto">
+          <blockquote className="border-l-4 border-gray-600 pl-6 py-3 italic text-xl text-black/85 max-w-xl mx-auto">
             "We're not riding the wave. We're creating it-with you, from day zero."
           </blockquote>
         </div>
