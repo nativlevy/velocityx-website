@@ -45,18 +45,13 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center bg-black/5 backdrop-blur-sm px-4 py-1 rounded-full text-black/80 text-sm mb-6 border border-black/10">
-            <span>Investing at the nexus of AI, Data, and Security</span>
-          </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-black mb-6 tracking-tight">
             From <span className="text-blue-500">day zero</span> to<br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">exponential growth</span>
           </h1>
           
           <p className="text-xl text-black/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            An operator-led venture group backing exceptional technical teams,
-            helping them validate and build ventures from inception.
+          Operator-led venture group backing elite technical teams from inception-validating and building at the nexus of AI, Data, and Security.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
