@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../ui/Section';
-import { Mail, MapPin } from 'lucide-react';
+import { Linkedin, MapPin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -20,21 +20,21 @@ const Contact: React.FC = () => {
           <div className="bg-white p-6 rounded-xl shadow-lg border border-black/5">
             <div className="flex items-center mb-4">
               <div className="bg-blue-500/10 p-3 rounded-lg mr-4 inline-flex">
-                <Mail className="w-7 h-7 text-blue-600" />
+                <Linkedin className="w-7 h-7 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-medium text-black">Email Us</h3>
+              <h3 className="text-2xl font-medium text-black">Connect on LinkedIn</h3>
             </div>
-            <a href="mailto:avishag@velocityx.vc" className="text-black/80 hover:text-blue-600 transition-colors block mb-1 text-lg">
-              avishag@velocityx.vc
+            <a href="https://www.linkedin.com/in/avishagbohbot/" target="_blank" rel="noopener noreferrer" className="text-black/80 hover:text-blue-600 transition-colors block mb-1 text-lg">
+              Avishag Bohbot
             </a>
             <p className="text-black/60 text-sm">
-              Reach out to Avishag for general inquiries.
+              Connect with Avishag for general inquiries.
             </p>
-            <a href="mailto:ipolad@gmail.com" className="text-black/80 hover:text-blue-600 transition-colors block mt-3 text-lg">
-              ipolad@gmail.com
+            <a href="https://www.linkedin.com/in/itzik-polad/" target="_blank" rel="noopener noreferrer" className="text-black/80 hover:text-blue-600 transition-colors block mt-3 text-lg">
+              Itzik Polad
             </a>
             <p className="text-black/60 text-sm">
-              Contact Itzik (Data Master) for data-specific questions.
+              Connect with Itzik (Data Master) for data-specific questions.
             </p>
           </div>
           
