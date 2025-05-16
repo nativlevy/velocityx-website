@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-light text-black mb-8">
-            Get in <span className="font-semibold text-black">Touch</span>
+            Get in <span className="font-semibold text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">Touch</span>
           </h2>
           <p className="text-lg text-black/75 mb-12 leading-relaxed max-w-2xl mx-auto">
             Whether you're a founder at day zero or already building, we'd love to hear from you.

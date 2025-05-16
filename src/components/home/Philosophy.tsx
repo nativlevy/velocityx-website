@@ -34,7 +34,7 @@ const Philosophy: React.FC = () => {
         <div ref={sectionRef} className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-              The <span className="text-black">X</span> | Investment Philosophy
+              The <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">X</span> | Investment Philosophy
             </h2>
             <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
               It starts with trust, not traction.

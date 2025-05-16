@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-black mb-6 tracking-tight">
-            From <span className="text-black">day zero</span> to<br />
-            <span className="text-black">exponential growth</span>
+            From <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">day zero</span> to<br />
+            <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">exponential growth</span>
           </h1>
           
           <p className="text-xl text-black/80 mb-10 max-w-2xl mx-auto leading-relaxed">

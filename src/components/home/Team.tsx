@@ -132,7 +132,7 @@ const Team: React.FC = () => {
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-            Meet the <span className="text-black">Team</span> Behind Your Team
+            Meet the <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">Team Behind Your Team</span>
           </h2>
           <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
           Operators with deep expertise in AI, data, and infra-shaped at Meta, Google, Microsoft, Zendesk and breakout startups. Built, scaled, and exited-now backing the next generation from day zero.
