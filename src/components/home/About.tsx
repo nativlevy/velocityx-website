@@ -37,9 +37,9 @@ const About: React.FC = () => {
             </h2>
             <p className="text-black/80 mb-8 leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
               We are you.
-              Operators, data execs, and post-exit founders with deep roots in AI, data, and infra.
-              The kind we wish we had when we started-early, hands-on, and all-in.
-              We move fast, build conviction early, and bring velocity where it matters most. 
+              <br />
+              Builders turned backers. Deep in AI, data, and infra. Early, hands-on, and all-injust like we needed when we started.
+We move fast and bring velocity where it matters most.  
             </p>
             
             <div className="space-y-6 animate-on-scroll opacity-0 animation-delay-600">

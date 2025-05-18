@@ -105,10 +105,10 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 15,
-      name: 'Sensi.Ai',
-      url: 'https://www.sensi.ai/',
+      name: 'Calmigo',
+      url: 'https://calmigo.com/',
       status: 'active',
-      category: 'AI',
+      category: 'Wellness',
       division: 'GP Portfolio [Avishag]',
     },
     {
@@ -224,6 +224,8 @@ const Portfolio: React.FC = () => {
     } else if (company.name === 'Deci') {
       logoSrc = '/images/logos/deciai.png';
       imgClassName = 'object-contain h-8 w-auto';
+    } else if (company.name === 'Oz [stealth] EW') {
+      logoSrc = '/images/logos/LOGO_OZ.jpg';
     } else if (company.url) {
       logoSrc = generateLogoUrl(company.url);
     }
@@ -265,7 +267,7 @@ const Portfolio: React.FC = () => {
               </span>
             )}
             {company.status === 'ipo' && (
-              <span className="text-xs px-2 py-1 rounded-full bg-gray-400/10 text-gray-700">
+              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-600">
                 IPO
               </span>
             )}

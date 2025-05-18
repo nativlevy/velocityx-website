@@ -30,10 +30,10 @@ const Footer: React.FC = () => {
           
           <div>
             <h3 className="text-black text-sm uppercase tracking-wider mb-4">Contact</h3>
-            <p className="text-sm mb-2">Tel Aviv, Israel</p>
+            <p className="text-sm mb-2">HaTachana, Ashkelon Street 14, Tel Aviv-Yafo</p>
             <p className="text-sm">
-              <a  className="hover:text-black transition-colors">
-                avishag at velocityx.vc
+              <a href="mailto:office@velocityx.vc" className="hover:text-black transition-colors">
+                office@velocityx.vc
               </a>
             </p>
           </div>
