@@ -90,9 +90,9 @@ const Portfolio: React.FC = () => {
     {
       id: 12,
       name: 'Agave',
-      url: 'https://www.agaveapi.com/',
+      url: 'https://www.agavehealth.com/',
       status: 'active',
-      category: 'Construction',
+      category: 'Mental Health',
       division: 'GP Portfolio [Avishag]',
     },
     {
