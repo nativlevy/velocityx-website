@@ -137,7 +137,7 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 19,
-      name: 'Conobo AI',
+      name: 'Conbo',
       url: 'https://www.conbo.ai/',
       status: 'active',
       category: 'AI',
