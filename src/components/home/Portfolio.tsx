@@ -288,6 +288,9 @@ const Portfolio: React.FC = () => {
             From early-stage startups to successful exits, we've partnered with exceptional founders building
             the future of AI, data, and security.
           </p>
+          <p className="text-black/60 max-w-3xl mx-auto text-center mt-4 animate-on-scroll opacity-0 animation-delay-500">
+            Permissionless founders 😊
+          </p>
         </div>
         
         {divisionOrder.map(divisionName => {

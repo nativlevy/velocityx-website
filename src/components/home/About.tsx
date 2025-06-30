@@ -36,10 +36,9 @@ const About: React.FC = () => {
               </span>
             </h2>
             <p className="text-black/80 mb-8 leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-              We are you.
+              We're you.
               <br />
-              Builders turned backers. Deep in AI, data, and infra. Early, hands-on, and all-injust like we needed when we started.
-We move fast and bring velocity where it matters most.  
+              Builders turned backers in AI, data, and infra.Early, hands-on-from day 0-like we needed.We bring Velocity where it matters.
             </p>
             
             <div className="space-y-6 animate-on-scroll opacity-0 animation-delay-600">
@@ -48,7 +47,7 @@ We move fast and bring velocity where it matters most.
                   <Building2 className="w-6 h-6 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl text-black mb-2">Our Founders Shack | TLV</h3>
+                  <h3 className="text-xl text-black mb-2">Where builders meet the sea. Tel Aviv. Invite-only.</h3>
                   <p className="text-black/70">
                     An invite-only seafront space in Tel Aviv where founders build, connect, and surf when waves are good.
                   </p>
@@ -60,10 +59,9 @@ We move fast and bring velocity where it matters most.
                   <TrendingUp className="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl text-black mb-2">0-Day Stage</h3>
+                  <h3 className="text-xl text-black mb-2">Minus Zero [-0]</h3>
                   <p className="text-black/70">
-                    As early as it gets. We partner before the pitch deck-at inception, when it's just a problem, a person, or a prototype.
-                    Our first checks range from $250K to $1M. 
+                    Pre-deck. Pre-hype. We back problems, people, and prototypes-$250K to $1M.
                   </p>
                 </div>
               </div>

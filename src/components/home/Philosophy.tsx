@@ -37,8 +37,8 @@ const Philosophy: React.FC = () => {
               The <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">X</span> | Investment Philosophy
             </h2>
             <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-              It starts with trust, not traction.
-              From day zero at the Shack- co-building with founders, validating with real AI leaders. The X is showing up early-building with you before the world pays attention.
+              The greatest X forms where the signal is quietest.
+              From day zero at the Shack, we build with you-before the world pays attention.
             </p>
             <button
               onClick={() => setShowBlueprint(true)}

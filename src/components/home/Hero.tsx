@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl text-black/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Operator-led venture group backing elite technical teams from inception-validating and building at the nexus of AI, Data, and Security.
+          Backing elite teams from inception-where AI, Data, and Security converge.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

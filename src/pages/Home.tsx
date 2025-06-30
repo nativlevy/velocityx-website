@@ -4,6 +4,7 @@ import About from '../components/home/About';
 import Philosophy from '../components/home/Philosophy';
 import Portfolio from '../components/home/Portfolio';
 import Team from '../components/home/Team';
+import Newsletter from '../components/home/Newsletter';
 import Contact from '../components/home/Contact';
 
 const Home: React.FC = () => {
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <Philosophy />
       <Team />
       <Portfolio />
+      <Newsletter />
       <Contact />
     </div>
   );

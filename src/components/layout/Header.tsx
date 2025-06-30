@@ -41,6 +41,9 @@ const Header: React.FC = () => {
           <a href="#team" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
             Team
           </a>
+          <a href="#newsletter" className="text-black/80 hover:text-black transition-colors text-sm uppercase tracking-widest">
+            Newsletter
+          </a>
           <a href="#contact" className="bg-black/5 hover:bg-black/10 border border-black/20 text-black py-2 px-4 rounded-full text-sm transition-all duration-300 flex items-center group">
             <span>Contact Us</span>
             <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -89,6 +92,13 @@ const Header: React.FC = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Team
+          </a>
+          <a
+            href="#newsletter"
+            className="text-black/80 hover:text-black transition-colors text-lg"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Newsletter
           </a>
           <a
             href="#contact"

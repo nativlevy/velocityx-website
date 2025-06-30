@@ -135,7 +135,7 @@ const Team: React.FC = () => {
             Meet the <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">Team Behind Your Team</span>
           </h2>
           <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-          Operators with deep expertise in AI, data, and infra-shaped at Meta, Google, Microsoft, Zendesk and breakout startups. Built, scaled, and exited-now backing the next generation from day zero.
+          AI, data, and infra operators from Meta, Google, Microsoft, and beyond-built, scaled, exited. Now backing the next wave.
           </p>
         </div>
         
