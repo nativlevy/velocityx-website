@@ -56,5 +56,22 @@ export default {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.min-h-screen-safe': {
+          'min-height': '100vh',
+          'min-height': '100svh',
+        },
+        '.h-screen-safe': {
+          'height': '100vh',
+          'height': '100svh',
+        },
+        '.max-h-screen-safe': {
+          'max-height': '100vh',
+          'max-height': '100svh',
+        },
+      }
+      addUtilities(newUtilities, ['responsive'])
+    }
   ],
 };

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import Section from '../ui/Section';
-import { Building2, TrendingUp, Users, Briefcase } from 'lucide-react';
 
 const About: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,77 +25,29 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <Section id="about" className="bg-gradient-to-b from-white to-gray-100">
-      <div ref={sectionRef} className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-                About Velocity<sup>x</sup>
-              </span>
-            </h2>
-            <p className="text-black/80 mb-8 leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-              We're you.
-              <br />
-              Builders turned backers in AI, data, and infra.Early, hands-on-from day 0-like we needed.We bring Velocity where it matters.
-            </p>
-            
-            <div className="space-y-6 animate-on-scroll opacity-0 animation-delay-600">
-              <div className="flex items-start">
-                <div className="bg-blue-500/10 p-3 rounded-lg mr-4">
-                  <Building2 className="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl text-black mb-2">Where builders meet the sea. Tel Aviv. Invite-only.</h3>
-                  <p className="text-black/70">
-                    An invite-only seafront space in Tel Aviv where founders build, connect, and surf when waves are good.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-purple-500/10 p-3 rounded-lg mr-4">
-                  <TrendingUp className="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl text-black mb-2">Minus Zero [-0]</h3>
-                  <p className="text-black/70">
-                    Pre-deck. Pre-hype. We back problems, people, and prototypes-$250K to $1M.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <Section id="about" className="bg-white relative">
+      <div ref={sectionRef} className="max-w-5xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-thin text-black mb-4 animate-on-scroll opacity-0 vintage-text">
+            About Velocity<sup>x</sup>
+          </h2>
+          <p className="text-lg text-black/80 animate-on-scroll opacity-0 animation-delay-300">
+            We back elite teams in data, AI and infra from inception.
+          </p>
+        </div>
+        
+        <div className="relative animate-on-scroll opacity-0 animation-delay-600 flex flex-col items-center px-4 sm:px-0">
+          <div className="vintage-border vintage-shadow rounded-lg overflow-hidden w-full max-w-[30rem] mx-4 sm:mx-0">
+            <img 
+              src="/images/location.jpg" 
+              alt="The Shack - where builders meet the sea, invite only, TLV."
+              className="w-full h-auto object-cover filter grayscale contrast-110 brightness-95 hover:brightness-100 transition-all duration-700 ease-in-out"
+            />
           </div>
-          
-          <div className="relative animate-on-scroll opacity-0 animation-delay-900">
-            <div className="rounded-2xl overflow-hidden border border-black/10">
-              <img 
-                src="/images/location.jpg" 
-                alt="Velocity Team Collaboration"
-                className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
-              />
-            </div>
-            
-            {/* <div className="absolute -bottom-6 -right-6 bg-white/80 backdrop-blur-sm border border-black/10 rounded-xl p-6 w-64">
-              <div className="flex items-center mb-4">
-                <Users className="w-5 h-5 text-blue-500 mr-2" />
-                <h4 className="text-black text-sm">TEAM EXPERTISE</h4>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-500/20 text-blue-600 text-xs px-2 py-1 rounded-full">AI & ML</span>
-                <span className="bg-purple-500/20 text-purple-600 text-xs px-2 py-1 rounded-full">Data</span>
-                <span className="bg-green-500/20 text-green-600 text-xs px-2 py-1 rounded-full">Security</span>
-                <span className="bg-orange-500/20 text-orange-600 text-xs px-2 py-1 rounded-full">Scaling</span>
-              </div>
-            </div>
-            
-            <div className="absolute -top-6 -left-6 bg-black/5 backdrop-blur-sm border border-black/10 rounded-xl p-6">
-              <div className="flex items-center">
-                <Briefcase className="w-5 h-5 text-white mr-2" />
-                <h4 className="text-white">90%</h4>
-              </div>
-              <p className="text-white/70 text-sm">of our investments start at day zero</p>
-            </div> */}
+          <div className="text-center mt-6">
+            <p className="text-lg text-black/80 animate-on-scroll opacity-0 animation-delay-900">
+              The Shack - where builders meet the sea, invite only, TLV.
+            </p>
           </div>
         </div>
       </div>

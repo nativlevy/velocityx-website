@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Section from '../ui/Section';
-import { Lightbulb, Zap, Users, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import Modal from '../ui/Modal';
 import InvestmentBlueprint from './InvestmentBlueprint';
 
@@ -30,103 +30,91 @@ const Philosophy: React.FC = () => {
 
   return (
     <>
-      <Section id="philosophy" className="bg-gradient-to-b from-gray-100 to-white">
-        <div ref={sectionRef} className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-              The <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">X</span> | Investment Philosophy
+      <Section id="philosophy" className="bg-gray-50 relative">
+        <div ref={sectionRef} className="max-w-5xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-thin text-black mb-8 animate-on-scroll opacity-0 vintage-text">
+              The <span className="font-normal">X</span> | Investment Philosophy
             </h2>
-            <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-              The greatest X forms where the signal is quietest.
-              From day zero at the Shack, we build with you-before the world pays attention.
+            <p className="text-black/80 max-w-3xl mx-auto leading-relaxed text-lg animate-on-scroll opacity-0 animation-delay-300">
+            Breakouts aren’t lucky bets - they’re earned builds. 
+            We build with you. 
             </p>
             <button
               onClick={() => setShowBlueprint(true)}
-              className="mt-6 inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors duration-300 animate-on-scroll opacity-0 animation-delay-300"
+              className="mt-8 inline-flex items-center px-8 py-3 bg-black hover:bg-black/80 text-white rounded-full transition-all duration-500 animate-on-scroll opacity-0 animation-delay-500 vintage-text tracking-wider"
             >
-              <BookOpen className="w-5 h-5 mr-2" />
+              <BookOpen className="w-5 h-5 mr-3" />
               Read Our Investment Blueprint
             </button>
           </div>
+
+          <div className="flex flex-col items-center">
+            <img src="/images/build.png" alt="Build" className="w-full max-w-2xl" />
+            <p className="text-black/60 text-sm mt-4 italic">Image credit: Visualize Value</p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-gray-100/20 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-8 group hover:border-black/30 transition-all duration-300 animate-on-scroll opacity-0">
-              <div className="bg-blue-500/10 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-all duration-300">
-                <Lightbulb className="w-7 h-7 text-blue-600" />
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="vintage-border vintage-shadow bg-white rounded-lg p-8 group hover:shadow-lg transition-all duration-500 animate-on-scroll opacity-0">
+              <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center mb-6 group-hover:bg-black/10 transition-all duration-500">
+                <div className="w-4 h-4 bg-black/60 rounded-full"></div>
               </div>
-              <h3 className="text-xl text-black mb-4">Day Zero Investments</h3>
+              <h3 className="text-xl text-black mb-4 vintage-text">Day Zero Investments</h3>
               <p className="text-black/70 leading-relaxed mb-6">
-                90% of our investments start at day zero-shaping ideas, de-risking, and building alongside founders from inception.
+                90% of our investments start at day zero—shaping ideas, de-risking, and building alongside founders from inception.
               </p>
-              <div className="w-16 h-1 bg-blue-600/50 rounded"></div>
+              <div className="w-16 h-px bg-black/30"></div>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-100/20 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-8 group hover:border-black/30 transition-all duration-300 animate-on-scroll opacity-0 animation-delay-300">
-              <div className="bg-blue-500/10 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-all duration-300">
-                <Zap className="w-7 h-7 text-blue-600" />
+            <div className="vintage-border vintage-shadow bg-white rounded-lg p-8 group hover:shadow-lg transition-all duration-500 animate-on-scroll opacity-0 animation-delay-300">
+              <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center mb-6 group-hover:bg-black/10 transition-all duration-500">
+                <div className="w-4 h-4 bg-black/60 rounded-full"></div>
               </div>
-              <h3 className="text-xl text-black mb-4">Classic VC Model</h3>
+              <h3 className="text-xl text-black mb-4 vintage-text">Classic VC Model</h3>
               <p className="text-black/70 leading-relaxed mb-6">
                 10% of our investments follow a classic VC model. Straightforward, fast, and familiar for teams that are already up and running.
               </p>
-              <div className="w-16 h-1 bg-blue-600/50 rounded"></div>
+              <div className="w-16 h-px bg-black/30"></div>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-100/20 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-8 group hover:border-black/30 transition-all duration-300 animate-on-scroll opacity-0 animation-delay-600">
-              <div className="bg-blue-500/10 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-all duration-300">
-                <Users className="w-7 h-7 text-blue-600" />
+            <div className="vintage-border vintage-shadow bg-white rounded-lg p-8 group hover:shadow-lg transition-all duration-500 animate-on-scroll opacity-0 animation-delay-600">
+              <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center mb-6 group-hover:bg-black/10 transition-all duration-500">
+                <div className="w-4 h-4 bg-black/60 rounded-full"></div>
               </div>
-              <h3 className="text-xl text-black mb-4">Co-investment Network</h3>
+              <h3 className="text-xl text-black mb-4 vintage-text">Co-investment Network</h3>
               <p className="text-black/70 leading-relaxed mb-6">
-              When possible, we invite top AI & data angels to co-invest- enhancing expertise, GTM, and outcomes.
+                When possible, we invite top AI & data angels to co-invest—enhancing expertise, GTM, and outcomes.
               </p>
-              <div className="w-16 h-1 bg-blue-600/50 rounded"></div>
+              <div className="w-16 h-px bg-black/30"></div>
             </div>
-          </div>
+          </div> */}
           
-          <div className="mt-20 bg-black/5 backdrop-blur-sm border border-black/10 rounded-xl p-8 md:p-12 animate-on-scroll opacity-0 animation-delay-900">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl text-black mb-6">Core Investment Themes</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="bg-blue-500/10 p-1 rounded mr-3 mt-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+          <div className="mt-20 flex justify-center">
+            <div className="vintage-border vintage-shadow bg-white rounded-lg p-10 md:p-12 animate-on-scroll opacity-0 animation-delay-900 w-fit max-w-lg">
+              <div className="text-center">
+                <h3 className="text-2xl text-black mb-8 vintage-text">Core Investment Themes</h3>
+                <ul className="space-y-4 text-left">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-black/60 rounded-full mr-4 flex-shrink-0"></div>
                     <span className="text-black/80">AI, ML, and LLM Optimization</span>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-blue-500/10 p-1 rounded mr-3 mt-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-black/60 rounded-full mr-4 flex-shrink-0"></div>
                     <span className="text-black/80">Data Engineering & Infrastructure</span>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-blue-500/10 p-1 rounded mr-3 mt-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-black/60 rounded-full mr-4 flex-shrink-0"></div>
                     <span className="text-black/80">User-Centric Data Solutions</span>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-blue-500/10 p-1 rounded mr-3 mt-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-black/60 rounded-full mr-4 flex-shrink-0"></div>
                     <span className="text-black/80">Data Operations & Governance</span>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-blue-500/10 p-1 rounded mr-3 mt-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-black/60 rounded-full mr-4 flex-shrink-0"></div>
                     <span className="text-black/80">Data Observability</span>
                   </li>
                 </ul>
-              </div>
-              
-              <div>
-                
-                <blockquote className="border-l-4 border-blue-600 pl-6 italic text-black/90 text-xl leading-relaxed">
-                  "We partner with founders at the <span className="text-blue-600 not-italic font-medium">inception</span> stage, supporting them relentlessly until the world sees <span className="text-blue-600 not-italic font-medium">what we see</span>."
-                </blockquote>
               </div>
             </div>
           </div>

@@ -217,13 +217,13 @@ const Portfolio: React.FC = () => {
 
   const CompanyCard = ({ company }: { company: PortfolioCompany }) => {
     let logoSrc: string | undefined = undefined;
-    let imgClassName = 'object-contain max-h-full max-w-full';
+    let imgClassName = 'object-contain max-h-full max-w-full filter contrast-110 brightness-90';
 
     if (company.name === 'Ondigo') {
       logoSrc = '/images/logos/ondigo.png';
     } else if (company.name === 'Deci') {
       logoSrc = '/images/logos/deciai.png';
-      imgClassName = 'object-contain h-8 w-auto';
+      imgClassName = 'object-contain h-6 sm:h-8 md:h-10 w-auto filter contrast-110 brightness-90';
     } else if (company.name === 'Oz [stealth] EW') {
       logoSrc = '/images/logos/LOGO_OZ.jpg';
     } else if (company.url) {
@@ -236,41 +236,48 @@ const Portfolio: React.FC = () => {
           href={company.url || '#'}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-gradient-to-br from-gray-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl p-6 h-full transition-all duration-300 hover:border-black/30 hover:translate-y-[-5px] group"
+          className="block vintage-border vintage-shadow bg-white rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 h-full transition-all duration-700 hover:shadow-lg group"
         >
-          <div className="flex items-center justify-start h-20 mb-4 relative overflow-hidden">
-            {logoSrc && (
-              <img
-                src={logoSrc}
-                alt={`${company.name} logo`}
-                className={`${imgClassName} transition-all duration-300 filter grayscale group-hover:filter-none`}
-                onError={(e) => {
-                  // Fallback if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null;
-                  target.src = '/images/logo-placeholder.png';
-                }}
-              />
-            )}
-          </div>
-          <h3 className="text-lg text-black mb-1 flex items-center">
-            {company.name}
-            {company.url && <ExternalLink className="w-4 h-4 ml-1 text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity" />}
-          </h3>
-          <div className="flex items-center mt-2">
-            <span className="text-xs px-2 py-1 rounded-full bg-gray-500/10 text-gray-600 mr-2">
-              {company.category}
-            </span>
-            {company.status === 'acquired' && (
-              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-600">
-                Acquired
+          <div className="flex flex-col h-full">
+            {/* Logo section */}
+            <div className="flex items-center justify-start h-12 sm:h-14 md:h-16 lg:h-16 mb-2 sm:mb-3 relative overflow-hidden">
+              {logoSrc && (
+                <img
+                  src={logoSrc}
+                  alt={`${company.name} logo`}
+                  className={`${imgClassName} transition-all duration-500 group-hover:brightness-100`}
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = '/images/logo-placeholder.png';
+                  }}
+                />
+              )}
+            </div>
+            
+            {/* Company name */}
+            <h3 className="text-sm sm:text-base md:text-lg text-black mb-2 flex items-start vintage-text group-hover:text-black/90 transition-colors leading-tight flex-grow">
+              <span className="flex-1 line-clamp-2">{company.name}</span>
+              {company.url && <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" />}
+            </h3>
+            
+            {/* Tags section - aligned to bottom */}
+            <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 mt-auto">
+              <span className="inline-flex items-center justify-center text-xs px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-black/5 text-black/70 vintage-text tracking-wider leading-none">
+                {company.category}
               </span>
-            )}
-            {company.status === 'ipo' && (
-              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-600">
-                IPO
-              </span>
-            )}
+              {company.status === 'acquired' && (
+                <span className="inline-flex items-center justify-center text-xs px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-black/10 text-black/80 vintage-text tracking-wider leading-none">
+                  Acquired
+                </span>
+              )}
+              {company.status === 'ipo' && (
+                <span className="inline-flex items-center justify-center text-xs px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-black/10 text-black/80 vintage-text tracking-wider leading-none">
+                  IPO
+                </span>
+              )}
+            </div>
           </div>
         </a>
       </div>
@@ -278,19 +285,12 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <Section id="portfolio" className="">
+    <Section id="portfolio" className="bg-gray-50 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-            Our <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">Portfolio</span>
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 animate-on-scroll opacity-0 vintage-text">
+          <span className="font-normal">Portfolio</span>
           </h2>
-          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-            From early-stage startups to successful exits, we've partnered with exceptional founders building
-            the future of AI, data, and security.
-          </p>
-          <p className="text-black/60 max-w-3xl mx-auto text-center mt-4 animate-on-scroll opacity-0 animation-delay-500">
-            Permissionless founders 😊
-          </p>
         </div>
         
         {divisionOrder.map(divisionName => {
@@ -298,12 +298,12 @@ const Portfolio: React.FC = () => {
           if (companiesInDivision.length === 0) return null;
 
           return (
-            <div key={divisionName} className="mb-16">
+            <div key={divisionName} className="mb-12 md:mb-20">
               <h3 
-                className="text-2xl font-light text-black mb-8 animate-on-scroll opacity-0"
+                className="text-xl sm:text-2xl font-thin text-black mb-6 sm:mb-8 md:mb-10 animate-on-scroll opacity-0 vintage-text px-4 md:px-0"
                 dangerouslySetInnerHTML={{ __html: divisionName }}
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                 {companiesInDivision.map(company => (
                   <CompanyCard key={company.id} company={company} />
                 ))}

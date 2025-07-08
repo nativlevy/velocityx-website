@@ -59,7 +59,7 @@ const Team: React.FC = () => {
     {
       id: 13,
       name: 'Eti Fakiri',
-      title: 'Director of Product Management Meta, Operator VelocityX',
+      title: 'Director of Product Management @ Meta Superintelligence Labs',
       linkedin: 'https://www.linkedin.com/in/estherfakiri/',
       image: '/images/team/eti_fakiri.png'
     },
@@ -128,45 +128,45 @@ const Team: React.FC = () => {
   }, []);
 
   return (
-    <Section id="team" className="bg-gradient-to-b from-white to-gray-100">
+    <Section id="team" className="bg-white relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-black mb-6 animate-on-scroll opacity-0">
-            Meet the <span className="text-black bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">Team Behind Your Team</span>
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 animate-on-scroll opacity-0 vintage-text">
+            Meet the <span className="font-normal">Team Behind Your Team</span>
           </h2>
-          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed animate-on-scroll opacity-0 animation-delay-300">
-          AI, data, and infra operators from Meta, Google, Microsoft, and beyond-built, scaled, exited. Now backing the next wave.
+          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed text-base md:text-lg animate-on-scroll opacity-0 animation-delay-300 px-4 md:px-0">
+            AI, data, and infra operators from Meta, Google, Microsoft, and beyond—built, scaled, exited. Now backing the next wave.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {teamMembers.map((member) => (
             <div
               key={member.id}
               className="group animate-on-scroll opacity-0"
-              style={{ animationDelay: `100ms` }}
+              style={{ animationDelay: `${member.id * 50}ms` }}
             >
-              <div className="bg-gradient-to-br from-gray-100/10 to-transparent backdrop-blur-sm border border-black/10 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-black/30 group-hover:translate-y-[-5px]">
-                <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="vintage-border vintage-shadow bg-white rounded-lg overflow-hidden transition-all duration-700 group-hover:shadow-xl h-full">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 filter grayscale group-hover:filter-none"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 filter contrast-110 brightness-95 hover:brightness-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
                   
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl text-white font-medium mb-1">{member.name}</h3>
-                    <p className="text-white/80 text-sm line-clamp-2">{member.title}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4">
+                    <h3 className="text-xs sm:text-sm md:text-base text-white font-light mb-1 vintage-text leading-tight">{member.name}</h3>
+                    <p className="text-white/95 text-xs leading-tight line-clamp-2 sm:line-clamp-3">{member.title}</p>
                   </div>
                   
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-4 right-4 bg-black/30 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 hover:bg-white text-black/80 hover:text-blue-600 p-2 sm:p-2.5 rounded-full transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-xl touch-target group/linkedin"
                   >
-                    <Linkedin className="w-5 h-5" />
+                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover/linkedin:scale-110" />
                   </a>
                 </div>
               </div>

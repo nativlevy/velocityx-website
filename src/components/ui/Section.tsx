@@ -16,9 +16,9 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`py-16 md:py-24 ${fullHeight ? 'min-h-screen flex items-center' : ''} ${className}`}
+      className={`py-12 sm:py-16 md:py-20 lg:py-24 ${fullHeight ? 'min-h-screen flex items-center' : ''} ${className}`}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6">
         {children}
       </div>
     </section>

@@ -17,18 +17,18 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   href,
 }) => {
-  const baseClasses = 'rounded-full font-medium transition-all duration-300 inline-flex items-center justify-center';
+  const baseClasses = 'rounded-full font-light transition-all duration-500 inline-flex items-center justify-center tracking-wide';
   
   const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white',
-    secondary: 'bg-gray-200 hover:bg-gray-300 border border-gray-300 text-black',
-    outline: 'bg-transparent border border-black/30 text-black hover:bg-black/10',
+    primary: 'bg-black hover:bg-black/80 text-white border border-black',
+    secondary: 'bg-white/10 hover:bg-white/20 border border-white/30 text-black backdrop-blur-sm',
+    outline: 'bg-transparent border border-black/30 text-black hover:bg-black/5 hover:border-black/50',
   };
   
   const sizeClasses = {
-    sm: 'text-xs py-2 px-4',
-    md: 'text-sm py-3 px-6',
-    lg: 'text-base py-4 px-8',
+    sm: 'text-xs py-2 px-6 tracking-wider',
+    md: 'text-sm py-3 px-8 tracking-wider',
+    lg: 'text-base py-4 px-12 tracking-widest',
   };
   
   const allClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
