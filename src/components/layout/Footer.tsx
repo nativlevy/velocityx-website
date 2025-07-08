@@ -25,7 +25,6 @@ const Footer: React.FC = () => {
               <li><a href="#portfolio" className="text-sm hover:text-black transition-colors vintage-text">Portfolio</a></li>
               <li><a href="#team" className="text-sm hover:text-black transition-colors vintage-text">Our Team</a></li>
               <li><a href="#newsletter" className="text-sm hover:text-black transition-colors vintage-text">Newsletter</a></li>
-              <li><a href="#contact" className="text-sm hover:text-black transition-colors vintage-text">Contact</a></li>
             </ul>
           </div>
           
