@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
+          {/* <div>
             <h3 className="text-black text-sm uppercase tracking-wider mb-6 vintage-text">Contact</h3>
             <p className="text-sm mb-3 vintage-text">HaTachana, Ashkelon Street 14, Tel Aviv-Yafo</p>
             <p className="text-sm vintage-text">
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 office@velocityx.vc
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
