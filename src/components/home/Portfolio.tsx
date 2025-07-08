@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Section from '../ui/Section';
 import { ExternalLink } from 'lucide-react';
 
@@ -188,26 +188,6 @@ const Portfolio: React.FC = () => {
     return acc;
   }, {} as Record<string, PortfolioCompany[]>);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
-    childElements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      childElements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   const generateLogoUrl = (url: string) => {
     // Extract domain from URL
     let domain = url.replace(/(^\w+:|^)\/\//, '');
@@ -231,12 +211,12 @@ const Portfolio: React.FC = () => {
     }
 
     return (
-      <div className="animate-on-scroll opacity-0" style={{ animationDelay: `50ms` }}>
+      <div>
         <a
           href={company.url || '#'}
           target="_blank"
           rel="noopener noreferrer"
-          className="block vintage-border vintage-shadow bg-white rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 h-full transition-all duration-700 hover:shadow-lg group"
+          className="block vintage-border vintage-shadow bg-white rounded-lg p-3 sm:p-4 md:p-5 lg:p-6 h-full hover:shadow-lg group"
         >
           <div className="flex flex-col h-full">
             {/* Logo section */}
@@ -245,7 +225,7 @@ const Portfolio: React.FC = () => {
                 <img
                   src={logoSrc}
                   alt={`${company.name} logo`}
-                  className={`${imgClassName} transition-all duration-500 group-hover:brightness-100`}
+                  className={`${imgClassName} group-hover:brightness-100`}
                   onError={(e) => {
                     // Fallback if image fails to load
                     const target = e.target as HTMLImageElement;
@@ -257,9 +237,9 @@ const Portfolio: React.FC = () => {
             </div>
             
             {/* Company name */}
-            <h3 className="text-sm sm:text-base md:text-lg text-black mb-2 flex items-start vintage-text group-hover:text-black/90 transition-colors leading-tight flex-grow">
+            <h3 className="text-sm sm:text-base md:text-lg text-black mb-2 flex items-start vintage-text group-hover:text-black/90 leading-tight flex-grow">
               <span className="flex-1 line-clamp-2">{company.name}</span>
-              {company.url && <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" />}
+              {company.url && <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 text-gray-500 flex-shrink-0 mt-0.5" />}
             </h3>
             
             {/* Tags section - aligned to bottom */}
@@ -288,7 +268,7 @@ const Portfolio: React.FC = () => {
     <Section id="portfolio" className="bg-gray-50 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 animate-on-scroll opacity-0 vintage-text">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 vintage-text">
           <span className="font-normal">Portfolio</span>
           </h2>
         </div>
@@ -300,7 +280,7 @@ const Portfolio: React.FC = () => {
           return (
             <div key={divisionName} className="mb-12 md:mb-20">
               <h3 
-                className="text-xl sm:text-2xl font-thin text-black mb-6 sm:mb-8 md:mb-10 animate-on-scroll opacity-0 vintage-text px-4 md:px-0"
+                className="text-xl sm:text-2xl font-thin text-black mb-6 sm:mb-8 md:mb-10 vintage-text px-4 md:px-0"
                 dangerouslySetInnerHTML={{ __html: divisionName }}
               />
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">

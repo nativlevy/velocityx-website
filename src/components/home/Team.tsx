@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Section from '../ui/Section';
 import { Linkedin } from 'lucide-react';
 
@@ -107,34 +107,14 @@ const Team: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
-    childElements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      childElements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
     <Section id="team" className="bg-white relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 animate-on-scroll opacity-0 vintage-text">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin text-black mb-6 md:mb-8 vintage-text">
             Meet the <span className="font-normal">Team Behind Your Team</span>
           </h2>
-          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed text-base md:text-lg animate-on-scroll opacity-0 animation-delay-300 px-4 md:px-0">
+          <p className="text-black/80 max-w-3xl mx-auto leading-relaxed text-base md:text-lg px-4 md:px-0">
             AI, data, and infra operators from Meta, Google, Microsoft, and beyond—built, scaled, exited. Now backing the next wave.
           </p>
         </div>
@@ -143,30 +123,27 @@ const Team: React.FC = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="group animate-on-scroll opacity-0"
-              style={{ animationDelay: `${member.id * 50}ms` }}
+              className="group"
             >
-              <div className="vintage-border vintage-shadow bg-white rounded-lg overflow-hidden transition-all duration-700 group-hover:shadow-xl h-full">
+              <div className="vintage-border vintage-shadow bg-white rounded-lg overflow-hidden h-full">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 filter contrast-110 brightness-95 hover:brightness-100"
+                    className="w-full h-full object-cover filter contrast-110 brightness-95"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
-                  
                   <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4">
                     <h3 className="text-xs sm:text-sm md:text-base text-white font-light mb-1 vintage-text leading-tight">{member.name}</h3>
                     <p className="text-white/95 text-xs leading-tight line-clamp-2 sm:line-clamp-3">{member.title}</p>
                   </div>
-                  
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 hover:bg-white text-black/80 hover:text-blue-600 p-2 sm:p-2.5 rounded-full transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-xl touch-target group/linkedin"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 text-black/80 p-2 sm:p-2.5 rounded-full backdrop-blur-sm shadow-lg touch-target group/linkedin"
                   >
-                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover/linkedin:scale-110" />
+                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 </div>
               </div>
