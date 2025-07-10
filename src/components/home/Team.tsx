@@ -104,6 +104,20 @@ const Team: React.FC = () => {
       title: 'Founder Eva, Ex Checkpoint, Operator @ Velocity x',
       linkedin: 'https://www.linkedin.com/in/alon-boxiner-a1a713b4/',
       image: '/images/team/alon_boxiner.jpg'
+    },
+    {
+      id: 14,
+      name: 'Aviv Gadot',
+      title: 'SVP of Data Strategy at Current',
+      linkedin: 'https://www.linkedin.com/in/aviv-gadot-8b23a229/',
+      image: '/images/team/aviv_gadot.png'
+    },
+    {
+      id: 15,
+      name: 'Talya Pines', 
+      title: 'MBA intern @ Chicago Booth',
+      linkedin: 'https://www.linkedin.com/in/talya-pines/',
+      image: '/images/team/talya.jpeg'
     }
   ];
 
